@@ -128,3 +128,4 @@ dist
 
 .vscode
 .gitpod.yml
+tsconfig.json

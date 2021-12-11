@@ -1,0 +1,11 @@
+{
+  "name": "udemy-understanding-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/solfincode/udemy-understanding-typescript.git",
+  "author": "code",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.5.3"
+  }
+}
