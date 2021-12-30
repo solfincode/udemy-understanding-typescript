@@ -5,7 +5,9 @@
   "repository": "https://github.com/solfincode/udemy-understanding-typescript.git",
   "author": "code",
   "license": "MIT",
-  "scripts": {"start":"nodemon dist/index.js"},
+  "scripts": {
+    "start": "nodemon dist/index.js"
+  },
   "dependencies": {
     "nodemon": "^2.0.15",
     "typescript": "^4.5.3"

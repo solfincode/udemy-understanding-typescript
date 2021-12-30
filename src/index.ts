@@ -121,3 +121,32 @@ userInput = 5;
 userInput = "string";
 console.log(`userinput is ${userInput}`);
 
+//arrow function
+const addNum = (n1: number, n2: number) => n1 + n2;
+console.log(addNum(90, 20));
+
+//spread operator in array
+const hobby = ["golf", "apple"];
+const newHobby = ["running", "bike"];
+newHobby.push(...hobby);
+console.log("newHobby is", newHobby);
+
+//spread operator in object
+const obj = { nameEl: "david", ageEl: 20 };
+const newObj = { ...obj, hobby: "bike" };
+console.log(newObj);
+
+const SumOfNum = (...number: number[]) => {
+  const result = number.reduce((prev: number, curr: number) => prev + curr);
+  return result;
+};
+const numberEl: number[] = [1, 2, 3, 4, 5, 6];
+
+console.log(SumOfNum(...numberEl));
+
+//object && array destructuring
+const [s1, s2] = hobby;
+console.log(`hobby one is ${s1} and hobby two is ${s2}`);
+
+const { nameEl, ageEl } = obj;
+console.log(`object destructuring... name is ${nameEl} and age is ${ageEl}`);
