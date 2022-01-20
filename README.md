@@ -27,3 +27,8 @@
 - let & const
 - arrow function
 - array and object destructuring
+
+5. class 
+- blueprint for object instance and create object instance using class structure
+- super - inheritance from parent class
+- getter & setter

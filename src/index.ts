@@ -152,45 +152,81 @@ const { nameEl, ageEl } = obj;
 console.log(`object destructuring... name is ${nameEl} and age is ${ageEl}`);
 
 //class
-class Building{
+class Building {
   name: string;
   height: number;
-  rooms:string[] = []
-  constructor(n:string,b:number,r:string[]){
-    this.name = n
-    this.height = b
-    this.rooms = r
+  rooms: string[] = [];
+  constructor(n: string, b: number, r: string[]) {
+    this.name = n;
+    this.height = b;
+    this.rooms = r;
   }
-  build(){
-    console.log(`${this.name} has ${this.height} ft`)
+  build() {
+    console.log(`${this.name} has ${this.height} ft`);
   }
-  printAllRooms(){
-    this.rooms.map(el=>console.log(el));
+  printAllRooms() {
+    this.rooms.map((el) => console.log(el));
   }
 }
 
-const building_one = new Building("Superb Building one",2000,["room1","room2","room3"]);
+const building_one = new Building("Superb Building one", 2000, [
+  "room1",
+  "room2",
+  "room3",
+]);
 building_one.build();
 building_one.printAllRooms();
 
 //public - access out of class and public is default setting for keywords
-//private property - access within class 
+//private property - access within class
 //shorthand initialization
 
-class Cars{
-  color:string;
-  size:number;
+class Cars {
+  color: string;
+  size: number;
 
-  constructor(private c:string,s:number){
+  constructor(private c: string, s: number) {
     this.color = c;
     this.size = s;
   }
 
-  printProperty(){
+  printProperty() {
     console.log(`building has ${this.color} and size is ${this.size}`);
   }
 }
 
-
-const newCar = new Cars("red",20000);
+const newCar = new Cars("red", 20000);
 newCar.printProperty();
+
+class School extends Building {
+  admin: string[];
+  id: string;
+  constructor(id: string, admin: string[]) {
+    super("alfred school", 100, ["rooms"]);
+    this.admin = admin;
+    this.id = id;
+  }
+  get getTheAdmin() {
+    return this.admin;
+  }
+  getTheNameID(value:string){
+    return value
+  }
+  getTheName() {
+    return this.name;
+  }
+  set getTheID(value: string) {
+    if (!value) {
+      return;
+    }
+    this.getTheNameID(value);
+  }
+}
+
+const schoolsample = new School("IT", ["admin2"]);
+console.log(schoolsample);
+console.log("name is ",schoolsample.getTheName());
+//getter
+console.log("admin is ",schoolsample.getTheAdmin);
+//setter
+console.log("new ID is ",schoolsample.getTheNameID("Product"));
