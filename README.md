@@ -6,7 +6,7 @@
 
 ## Practice
 
-1. npm tsc --init
+1. npx tsc --init
 
 - create tsconfig.json file and you can set compile setting for typescript
 
