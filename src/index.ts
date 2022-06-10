@@ -209,8 +209,8 @@ class School extends Building {
   get getTheAdmin() {
     return this.admin;
   }
-  getTheNameID(value:string){
-    return value
+  getTheNameID(value: string) {
+    return value;
   }
   getTheName() {
     return this.name;
@@ -225,8 +225,25 @@ class School extends Building {
 
 const schoolsample = new School("IT", ["admin2"]);
 console.log(schoolsample);
-console.log("name is ",schoolsample.getTheName());
+console.log("name is ", schoolsample.getTheName());
 //getter
-console.log("admin is ",schoolsample.getTheAdmin);
+console.log("admin is ", schoolsample.getTheAdmin);
 //setter
-console.log("new ID is ",schoolsample.getTheNameID("Product"));
+console.log("new ID is ", schoolsample.getTheNameID("Product"));
+
+class Phone {
+  name: string;
+  size: string;
+  color: string;
+  constructor(name: string, size: string, color: string) {
+    this.name = name;
+    this.size = size;
+    this.color = color;
+  }
+  describe() {
+    console.log(`${this.name} is ${this.size} and ${this.color}`);
+  }
+}
+
+const iphone = new Phone("iphone", "200", "blue");
+console.log(iphone);
